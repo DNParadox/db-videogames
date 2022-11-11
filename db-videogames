@@ -63,5 +63,9 @@ indie:  varchar(255)
 
 
 
+Genere_Videogioco:
+azione:  varchar(255)
+fantasy:  varchar(255)
+narrativa:  varchar(255)
 
 
