@@ -1,1 +1,67 @@
-test
+Software house:
+PK : softwarehouse int - UniqueID
+p_iva: small int
+nazione : varchar(255)
+città: varchar(100)
+
+Piattaforma:
+PK: piattaforma: int - UniqueID
+playstation: varchar(255)
+xbox: varchar(255)
+switch:  varchar(255)
+
+Torneo:
+PK: torneo int - UniqueID
+nome: varchar(100)
+nazione : varchar(255)
+città: varchar(100)
+
+
+Videogiocatori: 
+PK: videogiocatori: int - UniqueID
+nome: varchar(255)
+cognome: varchar(255)
+città: varchar(100)
+
+
+Videogames:
+PK:ID  - int
+nome: varchar(255)
+FK: piattaforma: int - UniqueID
+trama: text
+data_rilascio: year
+FK: softwarehouse: int 
+FK: genere_videogioco: int 
+FK: classificazione_pegi: int
+FK: videogiocatori: int
+FK: goty
+FK: recensioni: text
+FK: torneo
+
+
+
+Recensioni:
+recensioni: text
+titolo: varchar(255)
+descrizione: text
+rating: smallInt
+
+
+Classificazione Pegi:
+PK: classificazione_pegi
+pegi_3: text
+pegi_12: text
+pegi_18: text
+
+
+GOTY: 
+gioco_anno: varchar(255)
+narrativa:  varchar(255)
+colonna_sonora:  varchar(255)
+gioco_atteso:  varchar(255)
+indie:  varchar(255)
+
+
+
+
+
