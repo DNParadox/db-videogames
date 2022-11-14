@@ -37,20 +37,21 @@
 --from awards
 --where description  like '%facere%';
 
---7- Selezionare tutti i videogame che hanno la categoria 2 (FPS) o 6 (RPG), mostrandoli una sola volta (del videogioco vogliamo solo l'ID) (287)
+--7- Selezionare tutti i videogame che hanno la categoria 2 (FPS) o 6 (RPG), mostrandoli una sola volta (del videogioco vogliamo solo l'ID) (287) -- Done
 
---select *
---from videogames
+select distinct videogame_id
+from category_videogame
+WHERE category_id = 2 
+or category_id = 6
 
 
 
+--8- Selezionare tutte le recensioni con voto compreso tra 2 e 4 (2947) -- Done
 
---8- Selezionare tutte le recensioni con voto compreso tra 2 e 4 (2947)
-
-select * 
-from reviews
-where rating >= '2' 
-and rating <= '4'
+--select * 
+--from reviews
+--where rating >= '2' 
+--and rating <= '4' 
 
 --9- Selezionare tutti i dati dei videogiochi rilasciati nell'anno 2020 (46) -- Done
 
@@ -58,7 +59,13 @@ and rating <= '4'
 --from videogames
 --where release_date like '%2020%'
 
---10- Selezionare gli id dei videogame che hanno ricevuto almeno una recensione da 5 stelle, mostrandoli una sola volta (443)
+--10- Selezionare gli id dei videogame che hanno ricevuto almeno una recensione da 5 stelle, mostrandoli una sola volta (443) -- Done
+
+--select distinct videogame_id
+--from reviews
+--where rating = 5
+
+
 
 
 --*********** BONUS ***********
